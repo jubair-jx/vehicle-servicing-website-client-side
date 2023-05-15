@@ -16,11 +16,11 @@ const Navbar = () => {
       </li>
       <li>
         {" "}
-        <Link to="/">Blog</Link>{" "}
+        <Link to="/">Contact</Link>{" "}
       </li>
       <li>
         {" "}
-        <Link to="/">Contact</Link>{" "}
+        <Link to="login">Login</Link>{" "}
       </li>
     </>
   );
