@@ -32,7 +32,11 @@ const Checkout = () => {
       body: JSON.stringify(userDetails),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        if (data.insertedId) {
+          alert("Your Booking is Done");
+        }
+      })
       .catch((err) => console.log(err));
   };
   return (

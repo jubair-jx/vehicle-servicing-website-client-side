@@ -19,18 +19,22 @@ const Navbar = () => {
         {" "}
         <Link to="">About</Link>{" "}
       </li>
-      <li>
-        <Link to="/">Servicing</Link>{" "}
-      </li>
+
       <li>
         {" "}
         <Link to="/">Contact</Link>{" "}
       </li>
       {users?.email ? (
-        <li>
-          {" "}
-          <Link onClick={handleLogout}>Log Out</Link>
-        </li>
+        <>
+          <li>
+            {" "}
+            <Link to="/bookingServics">My Bookings</Link>
+          </li>
+          <li>
+            {" "}
+            <Link onClick={handleLogout}>Log Out</Link>
+          </li>{" "}
+        </>
       ) : (
         <li>
           {" "}
