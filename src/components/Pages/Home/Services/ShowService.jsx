@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ShowService = ({ service }) => {
-  const { price, img, title } = service;
+  const { _id, price, img, title } = service;
   return (
     <div>
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -14,7 +15,7 @@ const ShowService = ({ service }) => {
             Price : {price}
           </p>
           <div className="card-actions justify-end">
-            <button className="text-orange-500">
+            <Link to={`checkout/${_id}`} className="text-orange-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -29,7 +30,7 @@ const ShowService = ({ service }) => {
                   d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
