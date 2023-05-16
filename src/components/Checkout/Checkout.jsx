@@ -17,10 +17,23 @@ const Checkout = () => {
       customerName: name,
       email,
       date,
-      service: _id,
+      img,
+      service: title,
+
+      service_id: _id,
       price: price,
     };
     console.log(userDetails);
+    fetch("http://localhost:5000/booking", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
   };
   return (
     <div>
