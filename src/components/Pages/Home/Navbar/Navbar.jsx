@@ -7,7 +7,7 @@ const Navbar = () => {
   const { users, logOut } = useContext(AuthContext);
   const handleLogout = () => {
     logOut()
-      .then(localStorage.removeItem("access-token-pass"))
+      .then()
       .catch((err) => console.log(err));
   };
   const navItems = (
