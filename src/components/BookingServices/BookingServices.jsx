@@ -7,7 +7,12 @@ const BookingServices = () => {
   const [bookings, setBookings] = useState([]);
   const url = `http://localhost:5000/booking?email=${users.email}`;
   useEffect(() => {
-    fetch(url)
+    fetch(url, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("access-token-pass")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, [url]);
